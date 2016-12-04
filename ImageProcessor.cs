@@ -5,9 +5,9 @@ namespace BlurFaceBrowser
 {
     internal class ImageProcessor
     {
-        public static Bitmap Blur(Bitmap image, Rectangle rectangle, int pixelateSize = 10)
+        public static Bitmap Blur(Bitmap image, Rectangle rectangle, int pixelateSize = 6)
         {
-            pixelateSize = Math.Max(image.Size.Height / 500, 1) * Math.Max(image.Size.Width / 800, 1) * pixelateSize;
+            pixelateSize = Math.Max(image.Size.Height / 100, 1) * Math.Max(image.Size.Width / 100, 1) * pixelateSize;
 
             Bitmap blurred = new Bitmap(image);   //image.Width, image.Height);
             using ( Graphics graphics = Graphics.FromImage(blurred) )
