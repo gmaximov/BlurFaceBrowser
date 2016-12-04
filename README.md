@@ -1,5 +1,7 @@
 # BlurFaceBrowser
-How-to build
+
+## How to build this program
+
 1. Download this repository somewhere
 2. Restore NuGet Packages or reinstall:
   2a. last version of CEFSharp.Winforms and CEFSharp.Common
