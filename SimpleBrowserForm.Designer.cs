@@ -29,27 +29,31 @@
         private void InitializeComponent()
         {
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
-            this.statusLabel = new System.Windows.Forms.Label();
-            this.outputLabel = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.backButton = new System.Windows.Forms.ToolStripButton();
             this.forwardButton = new System.Windows.Forms.ToolStripButton();
             this.urlTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.goButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripContainer.ContentPanel.SuspendLayout();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.statusLabel = new System.Windows.Forms.ToolStripLabel();
+            this.outputLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripContainer.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer
             // 
             // 
+            // toolStripContainer.BottomToolStripPanel
+            // 
+            this.toolStripContainer.BottomToolStripPanel.Controls.Add(this.toolStrip2);
+            // 
             // toolStripContainer.ContentPanel
             // 
-            this.toolStripContainer.ContentPanel.Controls.Add(this.statusLabel);
-            this.toolStripContainer.ContentPanel.Controls.Add(this.outputLabel);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(730, 465);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(730, 440);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer.LeftToolStripPanelVisible = false;
             this.toolStripContainer.Location = new System.Drawing.Point(0, 0);
@@ -62,24 +66,6 @@
             // toolStripContainer.TopToolStripPanel
             // 
             this.toolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip1);
-            // 
-            // statusLabel
-            // 
-            this.statusLabel.AutoSize = true;
-            this.statusLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusLabel.Location = new System.Drawing.Point(0, 439);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(0, 13);
-            this.statusLabel.TabIndex = 1;
-            // 
-            // outputLabel
-            // 
-            this.outputLabel.AutoSize = true;
-            this.outputLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.outputLabel.Location = new System.Drawing.Point(0, 452);
-            this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(0, 13);
-            this.outputLabel.TabIndex = 0;
             // 
             // toolStrip1
             // 
@@ -131,6 +117,30 @@
             this.goButton.Text = "Go";
             this.goButton.Click += new System.EventHandler(this.GoButtonClick);
             // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLabel,
+            this.outputLabel});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(730, 25);
+            this.toolStrip2.Stretch = true;
+            this.toolStrip2.TabIndex = 0;
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(0, 22);
+            this.statusLabel.Visible = false;
+            // 
+            // outputLabel
+            // 
+            this.outputLabel.Name = "outputLabel";
+            this.outputLabel.Size = new System.Drawing.Size(0, 22);
+            // 
             // SimpleBrowserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,15 +148,18 @@
             this.ClientSize = new System.Drawing.Size(730, 490);
             this.Controls.Add(this.toolStripContainer);
             this.Name = "SimpleBrowserForm";
-            this.Text = "SimpleBrowserForm";
-            this.toolStripContainer.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer.ContentPanel.PerformLayout();
+            this.Text = "BlurFaceBrowser";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SimpleBrowserForm_FormClosing);
+            this.toolStripContainer.BottomToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer.BottomToolStripPanel.PerformLayout();
             this.toolStripContainer.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer.TopToolStripPanel.PerformLayout();
             this.toolStripContainer.ResumeLayout(false);
             this.toolStripContainer.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -159,8 +172,8 @@
         private System.Windows.Forms.ToolStripButton forwardButton;
         private System.Windows.Forms.ToolStripTextBox urlTextBox;
         private System.Windows.Forms.ToolStripButton goButton;
-        private System.Windows.Forms.Label outputLabel;
-        private System.Windows.Forms.Label statusLabel;
-
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripLabel statusLabel;
+        private System.Windows.Forms.ToolStripLabel outputLabel;
     }
 }

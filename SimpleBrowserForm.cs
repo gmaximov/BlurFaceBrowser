@@ -61,7 +61,7 @@ namespace BlurFaceBrowser
 
         private void OnBrowserStatusMessage(object sender, StatusMessageEventArgs args)
         {
-            this.InvokeOnUiThreadIfRequired(() => statusLabel.Text = args.Value);
+            this.InvokeOnUiThreadIfRequired(() => outputLabel.Text = args.Value);
         }
 
         private void OnBrowserLoadingStateChanged(object sender, LoadingStateChangedEventArgs args)
@@ -103,7 +103,7 @@ namespace BlurFaceBrowser
 
         public void DisplayOutput(string output)
         {
-            this.InvokeOnUiThreadIfRequired(() => outputLabel.Text = output);
+            this.InvokeOnUiThreadIfRequired(() => statusLabel.Text = output);
         }
 
         private void HandleToolStripLayout(object sender, LayoutEventArgs e)
@@ -164,9 +164,12 @@ namespace BlurFaceBrowser
             }
         }
 
-        private void toolStripContainer_ContentPanel_Load(object sender, EventArgs e)
+        private void SimpleBrowserForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if ( browser != null )
+            {
+                browser.Dispose();
+            }
         }
     }
 }

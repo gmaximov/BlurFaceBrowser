@@ -37,7 +37,7 @@ namespace BlurFaceBrowser
 
                         foreach ( Rectangle rectangle in rectangleList )
                         {
-                            bitmap = ImageProcessor.Pixelate(bitmap, rectangle);
+                            bitmap = ImageProcessor.Blur(bitmap, rectangle);
                         }
 
                         if ( rectangleList.Count > 0 )
