@@ -128,13 +128,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="haarcascade_frontalface_alt.xml">
+    <Content Include="haarcascade\haarcascade_frontalface_alt.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="haarcascade_frontalface_alt2.xml" />
-    <Content Include="haarcascade_frontalface_alt_tree.xml" />
-    <Content Include="haarcascade_frontalface_default.xml" />
-    <Content Include="haarcascade_profileface.xml">
+    <Content Include="haarcascade\haarcascade_frontalface_alt2.xml" />
+    <Content Include="haarcascade\haarcascade_frontalface_alt_tree.xml" />
+    <Content Include="haarcascade\haarcascade_frontalface_default.xml" />
+    <Content Include="haarcascade\haarcascade_profileface.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
