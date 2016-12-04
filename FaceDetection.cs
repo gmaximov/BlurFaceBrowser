@@ -22,7 +22,7 @@ namespace BlurFaceBrowser
 
         public static Rectangle[] FrontalDetect(Image<Bgr, byte> image)
         {
-            return Detect(image, "haarcascade_frontalface_alt_tree.xml");
+            return Detect(image, "haarcascade_frontalface_alt.xml");
         }
         public static Rectangle[] ProfileDetect(Image<Bgr, byte> image)
         {

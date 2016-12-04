@@ -89,12 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FaceDetection.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="ImageProcessor.cs" />
     <Compile Include="ImageResourceHandler.cs" />
     <Compile Include="ImageResourceHandlerFactory.cs" />
@@ -106,9 +100,6 @@
     <Compile Include="SimpleBrowserForm.Designer.cs">
       <DependentUpon>SimpleBrowserForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -137,11 +128,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="haarcascade_frontalface_alt.xml" />
-    <Content Include="haarcascade_frontalface_alt2.xml" />
-    <Content Include="haarcascade_frontalface_alt_tree.xml">
+    <Content Include="haarcascade_frontalface_alt.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="haarcascade_frontalface_alt2.xml" />
+    <Content Include="haarcascade_frontalface_alt_tree.xml" />
     <Content Include="haarcascade_frontalface_default.xml" />
     <Content Include="haarcascade_profileface.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
